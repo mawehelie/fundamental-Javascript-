@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JAVASCRIPT objects</title>
+	<script>
+	//Javascript Object
+	//#1-3
+	var x = [3,5,'Dojo', 'rocks', {name: 'Michael', title: 'Sensei'}]; 
+	x.push(100);
+	x.push(y = ['hello','new','array']); 
+
+
+	for(key in x){
+		console.log(x[key]);
+		console.log(typeof(x[key])); 
+
+	}
+
+	// #4
+	var sum = 0; 
+	for (var i = 1; i <= 500; i++ ) 
+	{
+	sum = sum + i;
+	console.log(sum); 
+	}; 
+
+
+	//#5
+
+	var start = new Date(); 
+	var now = start.getTime(); 
+	sum = 0;
+
+	//for loop starts here
+	for (var i = 1; i <= 1000000; i++ ) 
+	{
+	sum = sum + i;
+	}
+	var end = new Date(); 
+	var after= end.getTime(); 
+	var total_time = after - now; 
+	console.log(total_time); 
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

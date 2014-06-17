@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JAVASCRIPT objects</title>
+	<script>
+	
+	var person =
+	{
+		name: 'Trey', 
+		distance_traveled: 0,
+		say_name: function() 
+		{ 
+			alert(this.name); 
+		},
+		say_something: function(string)
+		{
+			console.log(this.name + ' says ' + string); 
+
+		},
+
+		walk: function()
+		{
+			alert(this.name + ' is walking'); 
+			this.distance_traveled +=3; 
+
+		}, 
+
+		run: function()
+		{
+			alert(this.name + ' is running'); 
+			this.distance_traveled +=10; 
+
+		}, 
+
+		crawl: function()
+		{
+			alert(this.name + ' is crawling'); 
+			this.distance_traveled +=1; 
+
+		}, 
+
+		doSomething: function()
+		{
+			randomNumber = Math.floor((Math.random()*3)+1); 
+
+			if(randomNumber == 1)
+			{
+				this.walk(); 
+			}
+
+			else if(randomNumber == 2)
+			{
+				 this.run(); 
+			}
+			else
+			{
+				 this.crawl() ; 
+			}
+
+		}, 
+
+		fly: function()
+		{
+			randomness = Math.floor((Math.random()*10)+1); 
+		
+			if(randomness <=3)
+			{
+				alert("I can fly"); 
+			}
+			else
+			{
+			alert ("I cannot fly");
+			}
+		}
+	};
+	// var walking = person.doSomething(); 
+	// walking; 
+
+	// var bob = person.fly(); 
+	
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

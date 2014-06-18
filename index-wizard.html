@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Introduction to Callbacks</title>
+ <script>
+  // declare the wizard
+  var wizard = {
+   // wizard attributes:
+   health: 500,
+   mana: 500,
+   // wizard spells:
+   spells: {
+    open_sesame: {mana_cost: 10},
+    chain_lightning: {mana_cost: 20},
+    fireball: {mana_cost: 30}
+   },
+   // wizard abilities
+   cast_spell: function(spell, callback) {
+    // declare caster to be available for the callback function below
+    var caster = this;
+    var invokeOne = Math.floor((Math.random()*5)+1);
+    if(invokeOne != 5){
+      caster.mana -= spell.man_cost; 
+      alert('Spell was good, the wizard man is now' + wizard.mana); 
+    }
+    else
+    {
+      alert('The spell failed'); 
+    }
+    // decrease the wizard's mana with a success rate of 80% and execute the callback function and pass a caster parameter that gets the wizard who casted a spell
+   }
+  };
+  wizard.cast_spell(wizard.spells.open_sesame, function(){
+
+  alert('The spell has been casted, the mana is now '  + wizard.mana);  
+});
+ </script>
+</head>
+<body>
+</body>
+</html>

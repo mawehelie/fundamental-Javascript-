@@ -1,0 +1,48 @@
+<script>
+
+
+
+var _ = ( function() {
+  return {
+   map: function(num) { 
+   	for( var i in num)
+   		{
+   			var answer = num[i]*3;
+   			return answer;  
+   		} 
+   },
+   reduce: function(a) {
+   		var result = 0; 
+   		for (var i in a){
+   			result =  result + a[i]; 
+   		}
+   		console.log(result); 
+   		return result;
+
+    },
+   // find: function() { //codes he},
+   filter: function(num) {
+   		for (var i in num){
+   			if(i % 2 != 0)
+   			{
+   				console.log(i); 
+   			} 
+   			else
+   			{
+   				console.log( i + ' did not pass'); 
+   			}
+   		}
+
+   },
+   // reject: function() { //codes here}
+ }
+}
+ )();
+//you just created a library with 5 methods!
+// var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; }); //should return [2, 4, 6] after you finish implementing the codes above
+
+// _.map([2,4,5,6]); 
+_.reduce([1,2,3]); 
+_.filter([1,2,3]); 
+
+</script>
